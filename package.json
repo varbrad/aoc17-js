@@ -1,0 +1,26 @@
+{
+  "name": "aoc17",
+  "version": "1.0.0",
+  "private": true,
+  "description":
+    "My Advent of Code 2017 solutions. Written in JavaScript, Python and whatever else I decide to randomly use.\r http://adventofcode.com",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "unexpected": "^10.36.2"
+  },
+  "scripts": {
+    "test": "mocha --reporter dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varbrad/aoc17.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varbrad/aoc17/issues"
+  },
+  "homepage": "https://github.com/varbrad/aoc17#readme"
+}
