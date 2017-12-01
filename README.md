@@ -3,6 +3,9 @@
 My Advent of Code 2017 solutions. Written in JavaScript, Python and whatever
 else I decide to randomly use. http://adventofcode.com
 
+My solutions will almost certainly not be the most optimized, best practices or
+heck even actually work properly.
+
 ### JavaScript
 
 Run using Node 8 (or lower maybe, who knows).
