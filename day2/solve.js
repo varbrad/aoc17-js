@@ -26,6 +26,9 @@ function solve1(input) {
   )
 }
 
+/**
+ * @param {String} input String of values with newlines as seperator
+ */
 function solve2(input) {
   let rows = input.split('\n')
   // Convert to arr of arrays with values
