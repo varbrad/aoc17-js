@@ -1,6 +1,6 @@
-# AoC 17'
+# Advent of Code 2017
 
-My Advent of Code 2017 solutions. Written in JavaScript, Python and whatever
+My AoC '17 solutions. Written in JavaScript, Python and whatever
 else I decide to randomly use. http://adventofcode.com
 
 My solutions will almost certainly not be the most optimized, best practices or
@@ -14,3 +14,8 @@ Run the days solutions using `node day1`, `node day2`, etc.
 
 Run the tests (and automatically runs solutions for some reason) using `npm test
 day1`, `npm test day2`, etc.
+
+### Python
+
+Whenever the alure of `itertools` grows too great, I will use Python for
+some challenges.
