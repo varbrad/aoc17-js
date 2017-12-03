@@ -2,7 +2,7 @@ const expect = require('unexpected')
 
 const { solve1, solve2 } = require('./solve')
 
-describe('Day 1', function() {
+describe('Day 2', function() {
   describe('Part 1', function() {
     it('Example 1', function() {
       expect(solve1('5 1 9 5\n7 5 3  \n2 4 6 8'), 'to be', 18)
