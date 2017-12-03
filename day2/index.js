@@ -6,5 +6,5 @@ const { solve1, solve2 } = require('./solve')
 const input = fs.readFileSync(path.join(__dirname, 'input.txt'), {
   encoding: 'utf-8'
 })
-console.log('Day 2, Part 1', solve1(input))
-console.log('Day 2, Part 2', solve2(input))
+console.log('Day 2, Part 1:', solve1(input))
+console.log('Day 2, Part 2:', solve2(input))
