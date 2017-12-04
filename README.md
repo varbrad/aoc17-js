@@ -1,7 +1,8 @@
 # Advent of Code 2017
 
-My AoC '17 solutions. Written in JavaScript, Python and whatever
-else I decide to randomly use. http://adventofcode.com
+http://adventofcode.com
+
+My AoC '17 solutions written in JavaScript that runs within Node.
 
 My solutions will almost certainly not be the most optimized, best practices or
 heck even actually work properly.
