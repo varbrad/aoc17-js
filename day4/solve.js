@@ -30,7 +30,7 @@ function solve2(n) {
       }
       return true
     })
-    .reduce((prev, cur) => (prev += cur ? 1 : 0), 0)
+    .reduce((prev, cur) => prev + (cur ? 1 : 0), 0)
 }
 
 module.exports = {
