@@ -14,8 +14,3 @@ Run the days solutions using `node day1`, `node day2`, etc.
 
 Run the tests (and automatically runs solutions for some reason) using `npm test
 day1`, `npm test day2`, etc.
-
-### Python
-
-Whenever the alure of `itertools` grows too great, I will use Python for
-some challenges.
