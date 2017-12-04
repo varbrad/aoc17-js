@@ -10,11 +10,9 @@ heck even actually work properly.
 
 Run using Node 8 (or lower maybe, who knows).
 
-Run the days solutions using `node day1`, `node day2`, etc.
+Run the days solutions using `node day1`, `node day2`, etc. Make sure to `npm install` first to make sure any deps are installed.
 
 ### Tests
 
-First install the dev deps via `npm install`.
-
-Then run the tests (and automatically runs solutions for some reason) using `npm test
+Run the tests (and automatically runs solutions for some reason) using `npm test
 day1`, `npm test day2`, etc.
