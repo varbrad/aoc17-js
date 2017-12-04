@@ -6,13 +6,13 @@ else I decide to randomly use. http://adventofcode.com
 My solutions will almost certainly not be the most optimized, best practices or
 heck even actually work properly.
 
-### JavaScript
+## JavaScript
 
 Run using Node 8 (or lower maybe, who knows).
 
 Run the days solutions using `node day1`, `node day2`, etc.
 
-#### Tests
+### Tests
 
 First install the dev deps via `npm install`.
 
