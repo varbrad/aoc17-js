@@ -1,5 +1,5 @@
 function solve1(n) {
-  let data = n.split('\n').map(v => Number(v))
+  let data = n.split('\n').map(Number)
   let i = 0
   let ticks = 0
   while (1) {
@@ -12,7 +12,7 @@ function solve1(n) {
 }
 
 function solve2(n) {
-  let data = n.split('\n').map(v => Number(v))
+  let data = n.split('\n').map(Number)
   let i = 0
   let ticks = 0
   while (1) {
