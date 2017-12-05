@@ -16,12 +16,15 @@ function solve1(n) {
  * @param {String} n The string to solve
  */
 function solve2(n) {
-  let sum = 0
-  let v = n.length / 2 // Always an even length so / 2 is fine
-  for (let i = 0; i < v; ++i) {
-    if (n[i] === n[i + v]) sum += Number(n[i])
-  }
-  return sum * 2
+  n = n.split('').map(Number)
+  return (
+    n
+      .slice(0, n.length / 2)
+      .reduceRight(
+        (p, c, i) => (p += c === n.slice(n.length / 2)[i] ? c : 0),
+        0
+      ) * 2
+  )
 }
 
 module.exports = {
