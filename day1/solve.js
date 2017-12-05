@@ -2,12 +2,13 @@
  * @param {String} n The string to solve
  */
 function solve1(n) {
-  let sum = 0
-  for (let i = 0; i < n.length - 1; ++i) {
-    if (n[i] === n[i + 1]) sum += Number(n[i])
-  }
-  if (n[0] === n[n.length - 1]) sum += Number(n[0])
-  return sum
+  return n
+    .split('')
+    .map(Number)
+    .reduce(
+      (p, c, i, a) => (p += c === a[i + 1] ? c : 0),
+      n[0] === n[n.length - 1] ? Number(n[0]) : 0
+    )
 }
 
 /**
