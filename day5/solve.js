@@ -8,14 +8,13 @@ function solve1(n) {
 
 function solve2(n) {
   const data = n.split('\n').map(Number)
-  let i = 0
-  let ticks = 0
-  while (++ticks) {
-    const v = data[i] >= 3 ? -1 : 1
-    i += (data[i] += v) - v
-    if (i < 0 || i >= data.length) break
+  let i = 0,
+    t = 0
+  while (++t) {
+    const n = data[i] >= 3 ? -1 : 1
+    if ((i += (data[i] += n) - n) < 0 || i >= data.length) break
   }
-  return ticks
+  return t
 }
 
 module.exports = {
