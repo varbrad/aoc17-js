@@ -13,13 +13,9 @@ function cycleSolver(e) {
   return [cyc, data]
 }
 
-function solve1(n) {
-  return cycleSolver(n)[0]
-}
+const solve1 = n => cycleSolver(n)[0]
 
-function solve2(n) {
-  return cycleSolver(cycleSolver(n)[1].join('\t'))[0]
-}
+const solve2 = n => cycleSolver(cycleSolver(n)[1].join('\t'))[0]
 
 module.exports = {
   solve1,
