@@ -13,16 +13,9 @@ function solve1(n) {
   })
   let memory = {}
   n.forEach(ins => {
-    // First, lets get the testAddr value
-    let testValue = memory[ins.testAddr]
-    if (testValue === undefined) testValue = 0
-    // Now check if the condition is true
-    let result = eval(testValue + ins.condition)
-    // Is this true, if so do the operation
-    if (result) {
-      memory[ins.addr] = memory[ins.addr] || 0
-      memory[ins.addr] += ins.mod
-    }
+    // If memory value passes condition, then modify memory
+    if (eval(memory[ins.testAddr] || 0 + ins.condition))
+      memory[ins.addr] = (memory[ins.addr] || 0) + ins.mod
   })
   let max = -Infinity
   for (let addr in memory) if (memory[addr] > max) max = memory[addr]
