@@ -1,6 +1,6 @@
 const expect = require('unexpected')
 
-const { solve1 } = require('./solve')
+const { solve1, solve2 } = require('./solve')
 
 const example1 = `b inc 5 if a > 1
 a inc 1 if b < 5
