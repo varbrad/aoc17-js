@@ -13,4 +13,9 @@ describe('Day 8', function() {
       expect(solve1(example1), 'to be', 1)
     })
   })
+  describe('Part 2', function() {
+    it('Example 1', function() {
+      expect(solve2(example1), 'to be', 10)
+    })
+  })
 })
