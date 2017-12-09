@@ -1,8 +1,3 @@
-function getScore(arr, parentScore) {
-  if (arr.length === 0) return parentScore + 1 // Empty arr []
-  return arr.reduce((p, c) => p + getScore(c, parentScore + 1), parentScore + 1)
-}
-
 function solve1(n) {
   // Clean input of ! escapes, and garbage
   n = n
@@ -12,7 +7,9 @@ function solve1(n) {
     .replace(/}/g, ']') // Turn } into ]
 
   // Return recursive score
-  return getScore(eval(n), 0)
+  const score = (a, p) =>
+    a.length ? a.reduce((ac, c) => ac + score(c, p + 1), p + 1) : p + 1
+  return score(eval(n), 0)
 }
 
 function solve2(n) {
