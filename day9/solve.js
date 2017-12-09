@@ -15,6 +15,15 @@ function solve1(n) {
   return getScore(eval(n), 0)
 }
 
+function solve2(n) {
+  return n
+    .replace(/!./g, '')
+    .match(/<.*?>/g)
+    .map(v => v.length - 2)
+    .reduce((c, v) => c + v, 0)
+}
+
 module.exports = {
-  solve1
+  solve1,
+  solve2
 }
