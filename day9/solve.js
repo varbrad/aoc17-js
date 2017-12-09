@@ -16,8 +16,7 @@ function solve2(n) {
   return n
     .replace(/!./g, '')
     .match(/<.*?>/g)
-    .map(v => v.length - 2)
-    .reduce((c, v) => c + v, 0)
+    .reduce((c, v) => c + v.length - 2, 0)
 }
 
 module.exports = {
