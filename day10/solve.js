@@ -36,12 +36,7 @@ function solve2(l, n) {
   // XOR the list in chunks of 16 values
   for (let i = 0; i < list.length; i += 16)
     dense.push(list.slice(i, i + 16).reduce((xor, cur) => xor ^ cur))
-  return dense
-    .map(num => {
-      let hex = num.toString(16) // Hex representation of value
-      return hex.length === 1 ? '0' + hex : hex
-    })
-    .join('') // Return joined hash
+  return dense.map(n => ('00' + n.toString(16)).substr(-2)).join('') // Return joined hash
 }
 
 module.exports = {
