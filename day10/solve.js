@@ -18,8 +18,7 @@ function hash(list, ins, i, skip) {
  * @param {String} n Puzzle input
  */
 function solve1(l, n) {
-  let list = [...Array(l).keys()]
-  hash(list, n.split(',').map(Number), 0, 0)
+  let [list] = hash([...Array(l).keys()], n.split(',').map(Number), 0, 0)
   return list[0] * list[1]
 }
 
