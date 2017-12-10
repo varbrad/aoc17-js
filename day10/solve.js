@@ -1,3 +1,18 @@
+// List = Data list, ins = List of instructions, i = index, skip = skip size
+function hash(list, ins, i, skip) {
+  const l = list.length
+  ins.forEach(v => {
+    let subArray = []
+    for (let k = 0; k < v; ++k) subArray.push(list[(k + i) % l])
+    subArray.reverse()
+    for (let k = 0; k < v; ++k) list[(k + i) % l] = subArray[k]
+    //
+    i += v + skip
+    skip++
+  })
+  return [list, i, skip]
+}
+
 /**
  * @param {Number} l Length of list
  * @param {String} n Puzzle input
@@ -24,21 +39,6 @@ function solve1(l, n) {
     })
   // Return
   return list[0] * list[1]
-}
-
-// List = Data list, ins = List of instructions, i = index, skip = skip size
-function hash(list, ins, i, skip) {
-  const l = list.length
-  ins.forEach(v => {
-    let subArray = []
-    for (let k = 0; k < v; ++k) subArray.push(list[(k + i) % l])
-    subArray.reverse()
-    for (let k = 0; k < v; ++k) list[(k + i) % l] = subArray[k]
-    //
-    i += v + skip
-    skip++
-  })
-  return [list, i, skip]
 }
 
 function solve2(l, n) {
