@@ -1,62 +1,41 @@
 function solve1(input) {
-  let nw = 0,
-    n = 0,
-    ne = 0
-  input.split(',').forEach(dir => {
-    switch (dir) {
-      case 'n':
-        n++
-        break
-      case 'ne':
-        ne++
-        break
-      case 'se':
-        nw--
-        break
-      case 's':
-        n--
-        break
-      case 'sw':
-        ne--
-        break
-      case 'nw':
-        nw++
-        break
-    }
-  })
-  return Math.abs(ne * 0.5 - nw * 0.5) + Math.abs(ne * 0.5 + nw * 0.5 + n)
+  let c = input.split(',').reduce(
+    (c, dir) => {
+      if (dir === 'nw') c[0]++
+      else if (dir === 'n') c[1]++
+      else if (dir === 'ne') c[2]++
+      else if (dir === 'se') c[0]--
+      else if (dir === 's') c[1]--
+      else if (dir === 'sw') c[2]--
+      return c
+    },
+    [0, 0, 0]
+  )
+  return (
+    Math.abs(c[2] * 0.5 - c[0] * 0.5) + Math.abs(c[2] * 0.5 + c[0] * 0.5 + c[1])
+  )
 }
 
 function solve2(input) {
-  let nw = 0,
-    n = 0,
-    ne = 0,
-    maxDist = 0
-  input.split(',').forEach(dir => {
-    switch (dir) {
-      case 'n':
-        n++
-        break
-      case 'ne':
-        ne++
-        break
-      case 'se':
-        nw--
-        break
-      case 's':
-        n--
-        break
-      case 'sw':
-        ne--
-        break
-      case 'nw':
-        nw++
-        break
-    }
-    const dist =
-      Math.abs(ne * 0.5 - nw * 0.5) + Math.abs(ne * 0.5 + nw * 0.5 + n)
-    if (dist > maxDist) maxDist = dist
-  })
+  let maxDist = 0
+  input.split(',').reduce(
+    (c, dir) => {
+      if (dir === 'nw') c[0]++
+      else if (dir === 'n') c[1]++
+      else if (dir === 'ne') c[2]++
+      else if (dir === 'se') c[0]--
+      else if (dir === 's') c[1]--
+      else if (dir === 'sw') c[2]--
+      //
+      const d =
+        Math.abs(c[2] * 0.5 - c[0] * 0.5) +
+        Math.abs(c[2] * 0.5 + c[0] * 0.5 + c[1])
+      if (d > maxDist) maxDist = d
+      //
+      return c
+    },
+    [0, 0, 0]
+  )
   return maxDist
 }
 
