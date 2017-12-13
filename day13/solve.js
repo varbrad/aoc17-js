@@ -1,9 +1,8 @@
 const isCaught = delay => ([d, r]) => (delay + d) % (2 * (r - 1)) === 0
-const severity = (layers, delay) =>
-  layers.filter(isCaught(delay)).reduce((n, [d, r]) => n + d * r, 0)
 
 const solve1 = n =>
-  severity(
+  ((layers, delay) =>
+    layers.filter(isCaught(delay)).reduce((n, [a, b]) => n + a * b, 0))(
     n.split('\n').map(s =>
       /(\d+): (\d+)/
         .exec(s)
