@@ -1,4 +1,4 @@
-const isCaught = delay => ([d, r]) => (delay + d) % (2 * (r - 1)) === 0
+const isCaught = delay => ([a, b]) => (delay + a) % (2 * (b - 1)) === 0
 
 const solve1 = n =>
   ((layers, delay) =>
