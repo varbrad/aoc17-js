@@ -15,5 +15,5 @@ console.time('solve2()')
 const p2 = solve2(input)
 console.timeEnd('solve2()')
 
-console.log('Day 12, Part 1:', p1)
-console.log('Day 12, Part 2:', p2)
+console.log('Day 13, Part 1:', p1)
+console.log('Day 13, Part 2:', p2)
