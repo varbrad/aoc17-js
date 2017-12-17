@@ -11,19 +11,17 @@ function solve1(n) {
 }
 
 function solve2(n) {
-  let list = [0]
+  let v = -1
   let i = 0
-  for (let k = 0; k < 5000000; ++k) {
-    if (k % 10000 === 0) console.log(k)
-    i = (i + n) % list.length
-    list.splice(i + 1, 0, k + 1)
-    if (i === 0) console.log('1 =>', list[1])
+  for (let k = 0; k < 50000000; ++k) {
+    i = (i + n) % (k + 1)
+    if (i === 0) {
+      v = k + 1
+    }
     i++
   }
-  return list.length
+  return v
 }
-
-solve2(377)
 
 module.exports = {
   solve1,
