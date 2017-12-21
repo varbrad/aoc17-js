@@ -42,33 +42,24 @@ function equal(a, b) {
 
 function doMatch(a, b) {
   // Rotate initial
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
+  for (let i = 0; i < 4; ++i) {
+    if (equal(a, b)) return true
+    rotate(a)
+  }
   // Flip left facing
   a.reverse()
   // Rotate left-racing (up-down flip)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
+  for (let i = 0; i < 4; ++i) {
+    if (equal(a, b)) return true
+    rotate(a)
+  }
   // Flip down-facing
   a.reverse()
   // Rotate down-facing (left-right flip)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
-  rotate(a)
-  if (equal(a, b)) return true
+  for (let i = 0; i < 4; ++i) {
+    if (equal(a, b)) return true
+    rotate(a)
+  }
 
   return false
 }
