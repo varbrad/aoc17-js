@@ -124,15 +124,6 @@ function solve1(start, n, LOOP_TOTAL) {
   return r
 }
 
-const start = `.#.
-..#
-###`
-
-const rules = `../.# => ##./#../...
-.#./..#/### => #..#/..../..../#..#`
-
-solve1(start, rules)
-
 module.exports = {
   solve1
 }
