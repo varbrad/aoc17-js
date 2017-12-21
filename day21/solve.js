@@ -73,11 +73,6 @@ function getMatch(rules, piece) {
       return rule.out
     }
   }
-
-  // Return some random thing
-  if (piece.length === 3)
-    return [[1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 1, 0], [1, 0, 0, 1]]
-  else return [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 }
 
 function solve1(start, n, LOOP_TOTAL) {
