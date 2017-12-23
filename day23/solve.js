@@ -52,11 +52,9 @@ function solve1(n) {
 
 function solve2(n) {
   let r = {
-    a: 1,
     b: 67,
     c: 67,
     d: 0,
-    e: 0,
     f: 0,
     g: 0,
     h: 0
@@ -66,7 +64,6 @@ function solve2(n) {
   do {
     r['f'] = 1
     r['d'] = 2
-    r['e'] = 2
     for (let d = r['d']; d * d < r['b']; ++d) {
       if (r['b'] % d === 0) {
         r['f'] = 0
